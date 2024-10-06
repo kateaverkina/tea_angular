@@ -8,11 +8,11 @@ body {
 }
 
 .slick-prev:before {
-  content: url("../public/images/стрелка.png");
+  content: url("../public/assets/images/стрелка.png");
 }
 
 .slick-next:before {
-  content: url("../public/images/стрелка-2.png");
+  content: url("../public/assets/images/стрелка-2.png");
 }
 
 .slick-next {
@@ -36,15 +36,15 @@ body {
 }
 
 .ui-state-hover .ui-icon,.ui-state-focus .ui-icon,.ui-button:hover .ui-icon,.ui-button:focus .ui-icon {
-  background-image: url("../public/images/next 3-2.png")
+  background-image: url("../public/assets/images/next 3-2.png")
 }
 
 .ui-state-active .ui-icon {
-  background-image: url("../public/images/next 3.png");
+  background-image: url("../public/assets/images/next 3.png");
 }
 
 .ui-icon {
-  background-image: url("../public/images/next 3-2.png");
+  background-image: url("../public/assets/images/next 3-2.png");
   width: 20px;
   height: 20px;
 }
