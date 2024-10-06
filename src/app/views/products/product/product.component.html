@@ -1,0 +1,25 @@
+<div class="products d-flex flex-column align-items-center justify-content-center">
+    <div class="container-fluid">
+        <div class="product">
+            <h1 class="fw-bold text-center mt-5">{{product.title}}</h1>
+            <ng-template [ngIf]="product.image">
+                <div class="product-img text-center" *ngIf="product.image">
+                    <img src="{{product.image}}" class="w-50">
+                </div>
+            </ng-template>
+
+            <div class="card-body">
+                <p class="card-text text-center border p-4">{{product.description}}</p>
+                <p class="card-text text-center fw-bold">Стоимость: {{product.price}}</p>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="btn-group text-center">
+                        <button type="button" routerLink="/order" [queryParams]="{product: product.title}"
+                                class="btn btn-primary px-5 hvr-shutter-out-horizontal text-center mb-5">
+                            Купить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

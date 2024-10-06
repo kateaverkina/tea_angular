@@ -1,0 +1,133 @@
+<div class="container-fluid p-3">
+  <div class="order-form col-lg-6 mx-auto my-5">
+    <h2 class="text-center mb-5 fw-bold" id="form-title">Сделать заказ</h2>
+    <form [formGroup]="formValues" id="form">
+
+      <div class="row mb-3">
+        <label class="col">
+          <span>Имя</span>
+          <input name="name" type="text" id="name-input"
+                 formControlName="name"
+                 class="form-control form-control-dark text-bg-white text-black">
+          <div *ngIf="name?.touched && name?.invalid">
+            <div class="text-danger" *ngIf="name?.errors?.['required']">
+              Введите имя
+            </div>
+          </div>
+
+          <div *ngIf="name?.dirty">
+            <div class="text-danger" *ngIf="name?.errors?.['pattern']">
+              Некорректное имя
+            </div>
+          </div>
+        </label>
+
+
+        <label class="col">
+          <span>Фамилия</span>
+          <input name="last_name" type="text" id="lastname-input"
+                 formControlName="last_name"
+                 class="form-control form-control-dark text-bg-white text-black">
+          <div *ngIf="last_name?.touched && last_name?.invalid">
+            <div class="text-danger" *ngIf="last_name?.errors?.['required']">
+              Введите Фамилию
+            </div>
+          </div>
+          <div *ngIf="last_name?.dirty">
+            <div class="text-danger" *ngIf="last_name?.errors?.['pattern']">
+              Некорректная фамилия
+            </div>
+          </div>
+        </label>
+
+
+        <label class="col">
+          <span>Телефон</span>
+          <input name="phone" type="tel" id="phone-input"
+                 formControlName="phone"
+                 class="form-control form-control-dark text-bg-white text-black">
+          <div *ngIf="phone?.touched && phone?.invalid">
+            <div class="text-danger" *ngIf="phone?.errors?.['required']">
+              Введите телефон
+            </div>
+          </div>
+          <div *ngIf="phone?.dirty">
+            <div class="text-danger" *ngIf="phone?.errors?.['pattern']">
+              Некорректный телефон
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col">
+          <span>Страна</span>
+          <input name="country" type="text" id="country-input"
+                 formControlName="country"
+                 class="form-control form-control-dark text-bg-white text-black">
+          <div *ngIf="(country?.dirty || country?.touched) && country?.invalid">
+            <div class="text-danger" *ngIf="country?.errors?.['required']">
+              Введите страну
+            </div>
+          </div>
+        </label>
+
+        <label class="col">
+          <span>Индекс</span>
+          <input name="zip" type="text" id="index-input"
+                 formControlName="zip"
+                 class="form-control form-control-dark text-bg-white text-black">
+          <div *ngIf="(zip?.dirty || zip?.touched) && zip?.invalid">
+            <div class="text-danger" *ngIf="zip?.errors?.['required']">
+              Введите индекс
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col">
+          <span>Товар</span>
+          <input name="product" type="text" id="product-input"
+                 formControlName="product"
+                 class="form-control form-control-dark text-bg-white text-black">
+        </label>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col">
+          <span>Адрес</span>
+          <input name="address" type="text" id="address-input"
+                 formControlName="address"
+                 class="form-control form-control-dark text-bg-white text-black">
+          <div *ngIf="address?.touched && address?.invalid">
+            <div class="text-danger" *ngIf="address?.errors?.['required']">
+              Введите адрес
+            </div>
+          </div>
+          <div *ngIf="address?.dirty">
+            <div class="text-danger" *ngIf="address?.errors?.['pattern']">
+              Некорректный адрес
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <div class="row mb-3">
+        <label class="col">
+          <span>Комментарий к заказу</span>
+          <input name="comment" type="text" id="comment-input"
+                 formControlName="comment"
+                 class="form-control form-control-dark text-bg-white text-black">
+        </label>
+      </div>
+      <button (click)="createOrder()" class="btn btn-primary mt-2 px-5 hvr-bounce-to-left" id="create-order">Отправить
+      </button>
+      <p id="error-message" class="text-danger">Произошла ошибка. Попробуйте еще раз.</p>
+    </form>
+    <div id="success-order">
+      <h1>Спасибо за заказ!</h1>
+    </div>
+  </div>
+
+</div>

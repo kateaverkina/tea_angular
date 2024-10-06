@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.slick-prev:before {
+  content: url("../public/images/стрелка.png");
+}
+
+.slick-next:before {
+  content: url("../public/images/стрелка-2.png");
+}
+
+.slick-next {
+  right: 30px;
+}
+
+.slick-prev {
+  left: 10px;
+  z-index: 3;
+}
+
+.ui-accordion-content {
+  border: none;
+}
+
+
+.ui-accordion-header-icon {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+}
+
+.ui-state-hover .ui-icon,.ui-state-focus .ui-icon,.ui-button:hover .ui-icon,.ui-button:focus .ui-icon {
+  background-image: url("../public/images/next 3-2.png")
+}
+
+.ui-state-active .ui-icon {
+  background-image: url("../public/images/next 3.png");
+}
+
+.ui-icon {
+  background-image: url("../public/images/next 3-2.png");
+  width: 20px;
+  height: 20px;
+}
+
+.ui-icon-triangle-1-s {
+  background-position: 0;
+}
+
+.ui-icon-triangle-1-e {
+  background-position: 0;
+
+}
+
+.hvr-shutter-out-horizontal {
+  background: #0d6efd;
+}
+
+.hvr-shutter-out-horizontal:before {
+  background: #062d67;
+  border-radius: 5px;
+}
+
+.hvr-bounce-to-left:before {
+  background: #062d67;
+  border-radius: 5px;
+}
+
+#accordion h3 {
+  padding-left: 20px;
+  position: relative;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 30px;
+  bottom: 50px;
+  z-index: 100;
+}
+
+.close {
+  width: 15px;
+  position: absolute;
+  top: -40px;
+  right: 20px;
+}
+
+#error-message {
+  display: none;
+}
+
+#success-order {
+   display: none;
+  text-align: center;
+}
+
+input.ng-invalid.ng-dirty,
+input.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+input.ng-invalid.ng-dirty + label,
+input.ng-invalid.ng-touched + label {
+  color: red;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

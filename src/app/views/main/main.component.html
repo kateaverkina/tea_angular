@@ -1,0 +1,53 @@
+<div class="container-fluid p-0">
+  <div class="container">
+    <div class="popup card-text text-center border p-4 w-50 bg-white" id="popup">
+      Посмотрите наши чайные коллекции
+      <svg (click)="closePopup()" class="close" id="close" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="122.878px" height="122.88px" viewBox="0 0 122.878 122.88" enable-background="new 0 0 122.878 122.88" xml:space="preserve"><g><path d="M1.426,8.313c-1.901-1.901-1.901-4.984,0-6.886c1.901-1.902,4.984-1.902,6.886,0l53.127,53.127l53.127-53.127 c1.901-1.902,4.984-1.902,6.887,0c1.901,1.901,1.901,4.985,0,6.886L68.324,61.439l53.128,53.128c1.901,1.901,1.901,4.984,0,6.886 c-1.902,1.902-4.985,1.902-6.887,0L61.438,68.326L8.312,121.453c-1.901,1.902-4.984,1.902-6.886,0 c-1.901-1.901-1.901-4.984,0-6.886l53.127-53.128L1.426,8.313L1.426,8.313z"/></g></svg>
+      <button type="button" class="btn btn-outline-primary py-2 px-4 hvr-shadow-radial mx-3" [routerLink]="['/products']">Смотреть</button>
+    </div>
+    <div class="main-image py-4">
+      <div class="main-image-inner">
+        <div class="main-image-item">
+          <img src="/images/chay-main-3.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+
+    <div class="questions col-lg-8 m-auto py-4">
+      <h2 class="text-center mb-5 fw-bold">Ответы на часто задаваемые вопросы</h2>
+      <div id="accordion">
+        <h3 class="bg-primary bg-gradient rounded-2 py-4 text-white">Собираете ли вы подарочные боксы?</h3>
+        <div>
+          <p class="p-4">
+            Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!
+          </p>
+        </div>
+        <h3 class="bg-primary bg-gradient rounded-2 py-4 text-white">Сколько у вас разновидностей чая?</h3>
+        <div>
+          <p class="p-4">
+            В нашем ассортименте более 100 разновидностей чая.
+          </p>
+        </div>
+        <h3 class="bg-primary bg-gradient rounded-2 py-4 text-white">В какой срок осуществляется доставка?</h3>
+        <div>
+          <p class="p-4">
+            Доставка осуществляется в течение 2-3 рабочих дней.
+          </p>
+        </div>
+        <h3 class="bg-primary bg-gradient rounded-2 py-4 text-white">У вас обновляется ассортимент?</h3>
+        <div>
+          <p class="p-4">
+            Да! Мы постоянно в поиске новых позиций чая для Вас.
+          </p>
+        </div>
+        <h3 class="bg-primary bg-gradient rounded-2 py-4 text-white">Какого объема у вас пачки чая?</h3>
+        <div>
+          <p class="p-4">
+            У нас есть 3 основных объема пачек чая: 250гр, 500гр и 1000гр.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
