@@ -7,13 +7,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.slick-prev:before {
-  content: url("/assets/images/стрелка.png");
-}
-
-.slick-next:before {
-  content: url("/assets/images/стрелка-2.png");
-}
 
 .slick-next {
   right: 30px;
@@ -36,15 +29,15 @@ body {
 }
 
 .ui-state-hover .ui-icon,.ui-state-focus .ui-icon,.ui-button:hover .ui-icon,.ui-button:focus .ui-icon {
-  background-image: url("/assets/images/next 3-2.png")
+  background-image: url("/assets/next_3-2.png")
 }
 
 .ui-state-active .ui-icon {
-  background-image: url("/assets/images/next 3.png");
+  background-image: url("/assets/next_3.png");
 }
 
 .ui-icon {
-  background-image: url("/assets/images/next 3-2.png");
+  background-image: url("/assets/next_3-2.png");
   width: 20px;
   height: 20px;
 }
