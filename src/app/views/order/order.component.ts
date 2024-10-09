@@ -31,7 +31,7 @@ export class OrderComponent implements OnInit {
       phone: ['', [Validators.required, this.fieldValidator('^\\+?[0-9]{11}$')]],
       country: ['', Validators.required],
       zip: ['', Validators.required],
-      product: ['', Validators.required],
+      product: [{value: '', disabled: true}, Validators.required],
       address: ['', [Validators.required, this.fieldValidator('^[A-zА-яЁё0-9-\\/\\s]+$')]],
       comment: ['']
     })
@@ -73,13 +73,12 @@ export class OrderComponent implements OnInit {
           product: params['product']
         })
       }
-      (document.getElementById('product-input') as HTMLElement).setAttribute('disabled', 'disabled');
     });
   }
 
   public createOrder() {
     if(this.name?.valid && this.last_name?.valid && this.phone?.valid && this.address?.valid) {
-      (document.getElementById('create-order') as HTMLElement).setAttribute('disabled', 'disabled');
+
       this.subscriptionOrder = this.productService.createOrder({
         name: this.name?.value,
         last_name: this.last_name?.value,
